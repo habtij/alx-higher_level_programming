@@ -2,7 +2,7 @@
 
 i = 0
 for ch in range(ord('z'), ord('a') - 1, -1):
-    print("{}".format(chr(c - i)), end="")
+    print("{}".format(chr(ch - i)), end="")
     if i == 0:
         i = 32
     else:
