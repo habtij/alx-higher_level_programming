@@ -1,0 +1,47 @@
+# 0-add_integer.txt
+
+How to use 0-add_integer.py
+
+The library contains ``add_integer(a, b=98)``.
+
+Numbers
+``add_integer(a, b=98)`` returns the sum of its arguments.
+
+For integer values.
+>>> from 0-add_integer import add_integer
+>>> add_function(10, 13)
+23
+
+It works with floating-point values, but converts the floating-point
+argument to integer and returned integer
+
+>>> add_integer(10.0, 13)
+23
+
+Passing one argument.
+Due to argument b set to 98 at default,
+``add_integer(a, b=98)`` can work with one argument
+
+>>> add_integer(2)
+100
+
+Passing Non-Number for a
+
+>>> add_integer('10', 13)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Passing Non-Number for b
+
+>>> add_integer(10, '23')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+Passing empty value
+
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
