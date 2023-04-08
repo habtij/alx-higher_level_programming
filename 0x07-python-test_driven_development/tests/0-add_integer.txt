@@ -9,7 +9,7 @@ Numbers
 
 For integer values.
 >>> from 0-add_integer import add_integer
->>> add_function(10, 13)
+>>> add_integer(10, 13)
 23
 
 It works with floating-point values, but converts the floating-point
