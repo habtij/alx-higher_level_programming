@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# 0-add_integer.py
+""" a module ``0-add_integer`` that contains ``add_integer`` function """
 
 def add_integer(a, b=98):
     """return the sum of a and b"""
