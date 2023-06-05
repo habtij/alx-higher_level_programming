@@ -2,6 +2,8 @@
 
 def add_tuple(tuple_a=(), tuple_b=()):
     """Add the first two elements of tuples"""
+    if not tuple_a and not tuple_b:
+        return(0, 0)
     if not tuple_a:
         return(tuple_b)
     elif not tuple_b:
