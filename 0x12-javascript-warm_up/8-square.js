@@ -9,7 +9,7 @@ if (Number(argv[2])) {
     for (let j = 0; j < num; j++) {
       res += 'X';
     }
-    if (i != num - 1) res += '\n';
+    if (i !== num - 1) res += '\n';
   }
   console.log(res);
 } else {
