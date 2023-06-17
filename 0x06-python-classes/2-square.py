@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-""" contains 'Square' class and '__size' attribute """
+""" ``2-square`` contains ``Square`` class and ``__size`` attribute """
 
 
 class Square:
-    """ A Square class with private attribute size """
+    """ A ``Square`` class with private attribute ``__size`` """
     __size
 
     def __init__(self, size=0):
-        """ An initializer with size attribute """
+        """ An initializer with ``__size`` attribute """
         if not type(size) is int:
             raise TypeError("size must be an integer")
         elif size < 0:
