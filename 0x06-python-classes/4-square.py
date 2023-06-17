@@ -34,7 +34,7 @@ class Square:
 
     def size(self):
         """ Retrieve the content of ``__size`` """
-        return (__self.__size)
+        return (self.__size)
 
     def size(self, value):
         """ Set __size to value """
