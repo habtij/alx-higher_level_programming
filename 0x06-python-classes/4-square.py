@@ -22,7 +22,7 @@ class Square:
         Args:
             size (int): The size of the square with optional 0 value
         """
-        size(size)
+        self.size(size)
 
     def area(self):
         """ Returns the square of self.__size """
