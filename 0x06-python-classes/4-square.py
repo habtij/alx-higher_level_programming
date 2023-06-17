@@ -14,6 +14,7 @@ class Square:
         area: Returns a square area.
         size(value): Set __size to value
     """
+    __size
 
     def __init__(self, size=0):
         """
