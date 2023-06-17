@@ -3,7 +3,7 @@
 
 
 class Square:
-    """ A square class with private attr size """
+    """ A square class with private attribute size """
     __size
     def __init__(self, new_size):
         """ An initializer method """
