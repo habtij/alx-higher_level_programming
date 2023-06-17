@@ -22,16 +22,20 @@ class Square:
         Args:
             size (int): The size of the square with optional 0 value
         """
-        if not type(size) is int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
         size(size)
 
     def area(self):
         """ Returns the square of self.__size """
         return (self.__size * self.__size)
 
+    def size(self):
+        """ Retrieve the content of ``__size`` """
+        return (__self.__size)
+
     def size(self, value):
         """ Set __size to value """
+        if not type(value) is int:
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
         self.__size = value
