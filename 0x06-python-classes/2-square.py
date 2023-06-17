@@ -1,13 +1,25 @@
 #!/usr/bin/python3
-""" ``2-square`` contains ``Square`` class and ``__size`` attribute """
+""" ``2-square``module contains ``Square`` class and ``__size`` attribute """
 
 
 class Square:
-    """ A ``Square`` class with private attribute ``__size`` """
-    __size
+    """
+    A class representing a  square.
+
+    Attributes:
+        __size (int): The size of the square (private).
+
+    Methods:
+        __init__(size): Initializes a Square object with a given size.
+    """
 
     def __init__(self, size=0):
-        """ An initializer with ``__size`` attribute """
+        """
+        Initializes a Square object with a given size.
+
+        Args:
+            size (int): The size of the square with optional 0 value
+        """
         if not type(size) is int:
             raise TypeError("size must be an integer")
         elif size < 0:
