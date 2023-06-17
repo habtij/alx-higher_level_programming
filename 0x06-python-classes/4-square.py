@@ -11,10 +11,10 @@ class Square:
 
     Methods:
         __init__(size): Initializes a Square object with a given size.
-        area: Returns a square area.
-        size(value): Set __size to value
+        area(): Returns a square area.
+        size(value): Set the size of square.
+        size(): Retrieve the size of square.
     """
-    __size
 
     def __init__(self, size=0):
         """
@@ -27,7 +27,7 @@ class Square:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        self.size(size)
+        self.__size = size
 
     def area(self):
         """ Returns the square of self.__size """
@@ -39,4 +39,8 @@ class Square:
 
     def size(self, value):
         """ Set __size to value """
+        if not type(value) is int:
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
         self.__size = value
