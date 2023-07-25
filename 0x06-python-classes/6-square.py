@@ -11,7 +11,8 @@ class Square:
         __position (tuple): The tuple of the square (private).
 
     Methods:
-        __init__(size): Initializes a Square object with a given size.
+        __init__(size, position): Initializes a Square object with
+                a given size and position.
         area(): Returns the area of the square.
         size(value): Set the size of square.
         size(): Retrieve the size of square.
