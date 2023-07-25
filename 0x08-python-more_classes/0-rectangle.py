@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+""" This module creates an empty rectangle class """
+
 
 class Rectangle:
-    """ A class that defines a Rectangle """
+    """ An empty rectangle class """
     pass
