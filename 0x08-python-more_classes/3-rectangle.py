@@ -86,7 +86,7 @@ class Rectangle:
 
         rect_str = ""
         for i in range(self.__height):
-            for j in range (self.__width):
+            for j in range(self.__width):
                 rect_str += "#"
             rect_str += "\n"
 
