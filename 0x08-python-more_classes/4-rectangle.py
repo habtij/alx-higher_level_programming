@@ -96,4 +96,4 @@ class Rectangle:
 
     def __repr__(self):
         """Return an object to create the str repr of the rect."""
-        return ("Rectangle(self.__width, self.__height)")
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
