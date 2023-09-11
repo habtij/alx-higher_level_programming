@@ -2,5 +2,6 @@
 
 def print_list_integer(my_list=[]):
     """Prints all the items in a list"""
-    for i in range(len(my_list)):
-        print("{:d}".format)
+    if len(my_list) > 0:
+        for i in range(len(my_list)):
+            print("{:d}".format)
