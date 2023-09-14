@@ -3,8 +3,8 @@
 def roman_to_int(roman_string):
     if not isinstance(roman_string, str) or roman_string is None:
         return (0)
-    roman_dict = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500,\
-            'M': 1000}
+    roman_dict = \
+        {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     roman_len = len(roman_string)
     if roman_len == 1:
         return (roman_dict[roman_string])
@@ -38,7 +38,7 @@ def roman_to_int(roman_string):
                 num += 900
             else:
                 num += 100
-        elif  roman_string[i] == "V":
+        elif roman_string[i] == "V":
             num += 5
         elif roman_string[i] == "L":
             num += 50
