@@ -18,6 +18,7 @@ def roman_to_int(roman_string):
             elif i+1 != roman_len and roman_string[i+1] == "X":
                 i += 1
                 num += 9
+                break
             else:
                 num += 1
         elif roman_string[i] == "X":
