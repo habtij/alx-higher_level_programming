@@ -26,18 +26,22 @@ def roman_to_int(roman_string):
             if i+1 != roman_len and roman_string[i+1] == "L":
                 i += 1
                 num += 40
+                break
             elif i+1 != roman_len and roman_string[i+1] == "C":
                 i += 1
                 num += 90
+                break
             else:
                 num += 10
         elif roman_string[i] == "C":
             if i+1 != roman_len and roman_string[i+1] == "D":
                 i += 1
                 num += 400
+                break
             elif i+1 != roman_len and roman_string[i+1] == "M":
                 i += 1
                 num += 900
+                break
             else:
                 num += 100
         elif roman_string[i] == "V":
