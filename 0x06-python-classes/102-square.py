@@ -32,42 +32,42 @@ class Square:
 
     def __lt__(self, other):
         """Checks if the area of current square is less than the other"""
-        if self.area > other.area:
+        if self.area() > other.area():
             return True
         else:
             return False
 
     def __eq__(self, other):
         """Checks if the area of the squares is equal"""
-        if self.area == other.area:
+        if self.area() == other.area():
             return True
         else:
             return False
 
     def __ne__(self, other):
         """Checks if the area are not equal"""
-        if self.area != other.area:
+        if self.area() != other.area():
             return True
         else:
             return False
 
     def __le__(self, other):
         """Checks if current area < other area"""
-        if self.area <= other.area:
+        if self.area() <= other.area():
             return True
         else:
             return False
 
     def __gt__(self, other):
         """Checks if the current area > other area"""
-        if self.area > other.area:
+        if self.area() > other.area():
             return True
         else:
             return False
 
     def __ge__(self, other):
         """Checks if the current area >= other area"""
-        if self.area >= other.area:
+        if self.area() >= other.area():
             return True
         else:
             return False
