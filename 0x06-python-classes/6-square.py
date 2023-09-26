@@ -8,7 +8,7 @@ class Square:
     """A square class that contains private size and position attribute,
     size and position getter and setter, my_print and area method
     """
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initiliaze size and position attribute for square"""
         self.size = size
         self.position = position
