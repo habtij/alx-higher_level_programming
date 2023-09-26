@@ -32,7 +32,7 @@ class Square:
 
     def my_print(self):
         """prints the graphical representation for the square with #"""
-        if size == 0:
+        if self.__size == 0:
             print("")
         else:
             for i in range(self.__size):
