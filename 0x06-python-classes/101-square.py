@@ -78,3 +78,4 @@ class Square:
                 for j in range(self.__size):
                     res += "#"
                 res += "\n"
+        return (res)
