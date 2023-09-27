@@ -32,7 +32,7 @@ class Square:
 
     def __lt__(self, other):
         """Checks if the area of current square is less than the other"""
-        if self.area() > other.area():
+        if self.area() < other.area():
             return True
         else:
             return False
