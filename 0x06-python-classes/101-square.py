@@ -57,7 +57,7 @@ class Square:
             print("")
         else:
             for i in range(self.__size):
-                if len(self.__position[0]) > 0:
+                if self.__position[0] > 0:
                     print(" " * self.__position[0], end="")
                 for j in range(self.__size):
                     print("#", end="")
@@ -73,7 +73,7 @@ class Square:
             res += "\n"
         else:
             for i in range(self.__size):
-                if len(self.__position[0]) > 0:
+                if self.__position[0] > 0:
                     res += " " * self.__position[0]
                 for j in range(self.__size):
                     res += "#"
