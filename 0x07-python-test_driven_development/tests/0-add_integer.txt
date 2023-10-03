@@ -1,0 +1,13 @@
+>>>add_integer = __import__('0-add_integer').add_integer
+>>>add_integer(10, 0)
+10
+>>>add_integer(-10, 0)
+-10
+>>>add_integer(10)
+108
+>>>add_integer(None)
+a must be an integer
+>>>add_integer(10, "alx")
+b must be an integer
+>>>add_integer(10.3, 2)
+12
