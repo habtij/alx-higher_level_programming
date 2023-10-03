@@ -49,7 +49,7 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """Inserts a new Node into the correct sorted position in the list"""
-        if self.head is None:
+        if self.head is None and value is not None:
             self.head = Node(value)
         else:
             temp = self.head
