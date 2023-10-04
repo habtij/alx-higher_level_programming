@@ -53,10 +53,11 @@ class Rectangle:
         """Returns the string representation of the rectangle with #"""
         res = ""
         if self.__width <= 0 or self.__height <= 0:
-            res = "\n"
+            res = ""
         else:
             for i in range(self.__height):
                 for j in range(self.__width):
                     res += "#"
-                res += "\n"
+                if i is not (self.__height - 1):
+                    res += "\n"
         return (res)
