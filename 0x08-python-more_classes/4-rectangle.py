@@ -60,6 +60,7 @@ class Rectangle:
                     res += "#"
                 res += "\n"
         return (res)
+
     def __repr__(self):
         """Returns a string representation of the rectangle to be able
         to recreate a new instance by eval
