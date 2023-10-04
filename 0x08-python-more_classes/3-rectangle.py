@@ -59,4 +59,4 @@ class Rectangle:
                 for j in range(self.__width):
                     res += "#"
                 res += "\n"
-        return (res)
+        return ("\"" + res + "\"")
