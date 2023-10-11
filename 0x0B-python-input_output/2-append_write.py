@@ -7,4 +7,4 @@ def append_write(filename="", text=""):
     characters
     """
     with open(filename, "a", encoding="utf-8") as line:
-        return file.write(text)
+        return line.write(text)
