@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module ``3-is_kind_of_class`` defines a function 
+"""This module ``3-is_kind_of_class`` defines a function
 ``is_kind_of_class`` that returns a boolean
 """
 
