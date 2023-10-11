@@ -11,7 +11,7 @@ class Rectangle(BaseGeometry):
         """
         Initializes a new Rectangle
 
-        Args: 
+        Args:
             width (int): The width of the new Rectangle
             height (int): The height of the new Rectangle
         """
