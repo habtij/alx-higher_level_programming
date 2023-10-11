@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define a class ``Student`` in ``10-student`` module"""
+"""Define a class ``Student`` in ``11-student`` module"""
 
 
 class Student:
@@ -22,7 +22,7 @@ class Student:
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
 
-    def reload_from_json(self. json):
+    def reload_from_json(self, json):
         """replaces all attributes of the ``Student`` instance"""
         for k, v in json.items():
             setattr(self, k, v)
