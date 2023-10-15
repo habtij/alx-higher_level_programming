@@ -11,3 +11,7 @@ class TestBase(unittest.TestCase):
 
         b2 = Base(10)
         assertEqual(b2.id, 10)
+
+
+if __name__ == '__main__':
+    unittest.main()
