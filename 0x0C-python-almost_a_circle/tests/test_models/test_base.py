@@ -7,10 +7,10 @@ import unittest
 class TestBase(unittest.TestCase):
     def test_base(self):
         b1 = Base()
-        assertEqual(b1.id, 1)
+        self.assertEqual(b1.id, 1)
 
         b2 = Base(10)
-        assertEqual(b2.id, 10)
+        self.assertEqual(b2.id, 10)
 
 
 if __name__ == '__main__':
