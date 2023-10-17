@@ -41,6 +41,8 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Sets the value of width"""
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(width))
         self.__width = value
 
     @property
