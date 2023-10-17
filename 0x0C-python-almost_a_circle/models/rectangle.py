@@ -27,9 +27,13 @@ class Rectangle(Base):
             __init__(width, height, x=0, y=0, id=None): Initializes the
                 Rectangle.
         """
+        self.integer_validator("width", width)
         self.__width = width
+        self.integer_validator("height", height)
         self.__height = height
+        self.integer_validator("x", x)
         self.__x = x
+        self.integer_validator("y", y)
         self.__y = y
         super().__init__(id)
 
@@ -41,8 +45,8 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Sets the value of width"""
-        if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(width))
+        if value <= 0
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -53,6 +57,8 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Sets the value of height"""
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -63,6 +69,8 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Sets the value of x coordinate"""
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -73,4 +81,6 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Sets the value of y coordinate"""
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
