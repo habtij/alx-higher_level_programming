@@ -32,5 +32,3 @@ class Base:
         """Validates the value, and raise an exception if there is error"""
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
-        elif value < 0:
-            raise ValueError("{} must be > 0".format(name))
