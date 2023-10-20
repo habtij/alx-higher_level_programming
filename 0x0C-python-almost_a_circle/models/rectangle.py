@@ -29,7 +29,7 @@ class Rectangle(Base):
             area(): return the area of the Rectangle.
             display(): prints in stdout the Rectangle instance with #
             __str__(): returns a custom print
-            update(*args): Updates the given values of the rectangle
+            update(*args, **kwargs): Updates the given values of the rectangle
         """
         self.width = width
         self.height = height
@@ -107,35 +107,52 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".
                 format(self.id, self.x, self.y, self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the Rectangle class"""
-        if len(args) >= 5:
-            super().__init__(args[0])
-            self.integer_validator("width", args[1])
-            self.width = args[1]
-            self.integer_validator("height", args[2])
-            self.height = args[2]
-            self.integer_validator("x", args[3])
-            self.x = args[3]
-            self.integer_validator("y", args[4])
-            self.y = args[4]
-        elif len(args) == 4:
-            super().__init__(args[0])
-            self.integer_validator("width", args[1])
-            self.width = args[1]
-            self.integer_validator("height", args[2])
-            self.height = args[2]
-            self.integer_validator("x", args[3])
-            self.x = args[3]
-        elif len(args) == 3:
-            super().__init__(args[0])
-            self.integer_validator("width", args[1])
-            self.width = args[1]
-            self.integer_validator("height", args[2])
-            self.height = args[2]
-        elif len(args) == 2:
-            super().__init__(args[0])
-            self.integer_validator("width", args[1])
-            self.width = args[1]
+        if len(args) > 0 and args is not None:
+            if len(args) >= 5:
+                super().__init__(args[0])
+                self.integer_validator("width", args[1])
+                self.width = args[1]
+                self.integer_validator("height", args[2])
+                self.height = args[2]
+                self.integer_validator("x", args[3])
+                self.x = args[3]
+                self.integer_validator("y", args[4])
+                self.y = args[4]
+            elif len(args) == 4:
+                super().__init__(args[0])
+                self.integer_validator("width", args[1])
+                self.width = args[1]
+                self.integer_validator("height", args[2])
+                self.height = args[2]
+                self.integer_validator("x", args[3])
+                self.x = args[3]
+            elif len(args) == 3:
+                super().__init__(args[0])
+                self.integer_validator("width", args[1])
+                self.width = args[1]
+                self.integer_validator("height", args[2])
+                self.height = args[2]
+            elif len(args) == 2:
+                super().__init__(args[0])
+                self.integer_validator("width", args[1])
+                self.width = args[1]
+            else:
+                super().__init__(args[0])
         else:
-            super().__init__(args[0])
+            for key, value in kwargs.items():
+                if key == "id":
+                    super().__init__(value)
+                elif key == "width":
+                    self.integer_validator(key, value)
+                    self.width = value
+                elif key == "height":
+                    self.integer_validator(key, value)
+                    self.height = value
+                elif key == "x":
+                    self.integer_validator(key, value)
+                    self.x = value
+                elif key == "y":
+                    self.integer_validator(key, value)
+                    self.y = value
