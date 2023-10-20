@@ -28,6 +28,7 @@ class Rectangle(Base):
                 Rectangle.
             area(): return the area of the Rectangle.
             display(): prints in stdout the Rectangle instance with #
+            __str__(): returns a custom print
         """
         self.width = width
         self.height = height
@@ -97,3 +98,8 @@ class Rectangle(Base):
             for i in range(self.__width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """Return a custom print"""
+        return ("[Rectangle] ({}) {}/{} - {}/{}".
+                format(self.id, self.x, self.y, self.width, self.height))
