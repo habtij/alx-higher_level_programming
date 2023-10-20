@@ -20,4 +20,4 @@ class Square(Rectangle):
     def __str__(self):
         """returns a custom print statement"""
         return ("[Square] ({}) {}/{} - {}".
-                format(self.id, self.x, self.y, self.width)
+                format(self.id, self.x, self.y, self.width))
