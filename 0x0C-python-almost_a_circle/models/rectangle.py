@@ -111,31 +111,31 @@ class Rectangle(Base):
         """Update the Rectangle class"""
         if len(args) >= 5:
             super().__init__(args[0])
-            self.integer_validator(args[1])
+            self.integer_validator("width", args[1])
             self.width = args[1]
-            self.integer_validator(args[2])
+            self.integer_validator("height", args[2])
             self.height = args[2]
-            self.integer_validator(args[3])
+            self.integer_validator("x", args[3])
             self.x = args[3]
-            self.integer_validator(args[4])
+            self.integer_validator("y", args[4])
             self.y = args[4]
         elif len(args) == 4:
             super().__init__(args[0])
-            self.integer_validator(args[1])
+            self.integer_validator("width", args[1])
             self.width = args[1]
-            self.integer_validator(args[2])
+            self.integer_validator("height", args[2])
             self.height = args[2]
-            self.integer_validator(args[3])
+            self.integer_validator("x", args[3])
             self.x = args[3]
         elif len(args) == 3:
             super().__init__(args[0])
-            self.integer_validator(args[1])
+            self.integer_validator("width", args[1])
             self.width = args[1]
-            self.integer_validator(args[2])
+            self.integer_validator("height", args[2])
             self.height = args[2]
         elif len(args) == 2:
             super().__init__(args[0])
-            self.integer_validator(args[1])
+            self.integer_validator("width", args[1])
             self.width = args[1]
         else:
             super().__init__(args[0])
