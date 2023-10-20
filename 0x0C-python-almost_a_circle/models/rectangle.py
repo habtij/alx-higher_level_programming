@@ -26,6 +26,8 @@ class Rectangle(Base):
             y(value): sets the value of y coordinate.
             __init__(width, height, x=0, y=0, id=None): Initializes the
                 Rectangle.
+            area(): return the area of the Rectangle.
+            display(): prints in stdout the Rectangle instance with #
         """
         self.width = width
         self.height = height
@@ -88,3 +90,10 @@ class Rectangle(Base):
     def area(self):
         """Return the area of Rectangle"""
         return (self.__width * self.__height)
+
+    def display(self):
+        """Prints in stdout the Rectangle instance with the character #"""
+        for i in range(self.__height):
+            for i in range(self.__width):
+                print("#", end="")
+            print()
