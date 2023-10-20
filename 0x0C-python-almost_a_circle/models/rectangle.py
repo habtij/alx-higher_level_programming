@@ -29,6 +29,7 @@ class Rectangle(Base):
             area(): return the area of the Rectangle.
             display(): prints in stdout the Rectangle instance with #
             __str__(): returns a custom print
+            update(*args): Updates the given values of the rectangle
         """
         self.width = width
         self.height = height
@@ -105,3 +106,36 @@ class Rectangle(Base):
         """Return a custom print"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".
                 format(self.id, self.x, self.y, self.width, self.height))
+
+    def update(self, *args):
+        """Update the Rectangle class"""
+        if len(args) >= 5:
+            super().__init__(args[0])
+            self.integer_validator(args[1])
+            self.width = args[1]
+            self.integer_validator(args[2])
+            self.height = args[2]
+            self.integer_validator(args[3])
+            self.x = args[3]
+            self.integer_validator(args[4])
+            self.y = args[4]
+        elif len(args) == 4:
+            super().__init__(args[0])
+            self.integer_validator(args[1])
+            self.width = args[1]
+            self.integer_validator(args[2])
+            self.height = args[2]
+            self.integer_validator(args[3])
+            self.x = args[3]
+        elif len(args) == 3:
+            super().__init__(args[0])
+            self.integer_validator(args[1])
+            self.width = args[1]
+            self.integer_validator(args[2])
+            self.height = args[2]
+        elif len(args) == 2:
+            super().__init__(args[0])
+            self.integer_validator(args[1])
+            self.width = args[1]
+        else:
+            super().__init__(args[0])
