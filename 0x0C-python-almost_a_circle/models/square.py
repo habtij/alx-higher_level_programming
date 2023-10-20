@@ -34,3 +34,40 @@ class Square(Rectangle):
         self.width = value
         self.integer_validator("height", value)
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """Update the value of Square"""
+        if len(args) > 0 and args is not None:
+            if len(args) >= 4:
+                super().__init__(args[0])
+                self.integer_validator("width", args[1])
+                self.size = args[1]
+                self.integer_validator("x", args[2])
+                self.x = args[2]
+                self.integer_validator("y", args[3])
+                self.y = args[3]
+            elif len(args) == 3:
+                super().__init__(args[0])
+                self.integer_validator("width", args[1])
+                self.size = args[1]
+                self.integer_validator("x", args[2])
+                self.x = args[2]
+            elif len(args) == 2:
+                super().__init__(args[0])
+                self.integer_validator("width", args[1])
+                self.size = args[1]
+            else:
+                super().__init__(args[0])
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    super().__init__(value)
+                elif key == "size":
+                    self.integer_validator("width", value)
+                    self.size = value
+                elif key == "x":
+                    self.integer_validator(key, value)
+                    self.x = value
+                elif key == "y":
+                    self.integer_validator(key, value)
+                    self.y = value
