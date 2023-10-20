@@ -21,3 +21,16 @@ class Square(Rectangle):
         """returns a custom print statement"""
         return ("[Square] ({}) {}/{} - {}".
                 format(self.id, self.x, self.y, self.width))
+
+    @property
+    def size(self):
+        """returns the size of the square"""
+        return (self.__width)
+
+    @size.setter
+    def size(self, value):
+        """Sets the value of size for the Square"""
+        self.integer_validator("width", value)
+        self.width = value
+        self.integer_validator("height", value)
+        self.height = value
