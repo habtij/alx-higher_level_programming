@@ -98,8 +98,9 @@ class Rectangle(Base):
         for i in range(self.__y):
             print()
         for i in range(self.__height):
+            print(" " * self.x, end="")
             for i in range(self.__width):
-                print("{}#".format(" " * self.__x), end="")
+                print("#", end="")
             print()
 
     def __str__(self):
