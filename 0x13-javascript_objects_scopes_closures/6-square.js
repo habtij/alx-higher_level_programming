@@ -8,7 +8,7 @@ class Square extends Square_parent {
     }
     for (let i = 0; i < this.height; i++) {
       let res = '';
-      for (j = 0; j < this.width; j++) {
+      for (let j = 0; j < this.width; j++) {
         res += c;
       }
       console.log(res);
